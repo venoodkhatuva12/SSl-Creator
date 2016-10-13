@@ -10,8 +10,8 @@ if [ "$(id -u)" != "0" ]; then
 fi
 # Installing needed dependencies
 sudo yum install gcc openssl openssl-devel pcre-devel git unzip -y
-sudo mkdir -p /apps/certificate
-cd /apps/certificate
+sudo mkdir -p /var/www/certificate
+cd /var/www/certificate
 sudo openssl genrsa -des3 -out server.key 2048
 
 sudo openssl req -new -key server.key -out server.csr
